@@ -28,21 +28,64 @@ Elle permet de créer, afficher, modifier et supprimer des cartes personnalisée
 
 ---
 
-## ⚙️ Installation & lancement
+## ⚙️ Installation & lancement (mode développement)
 
-Cloner le projet :  
+1. Cloner le projet
 ```bash
 git clone https://github.com/PortfolioChilderic/playing-card.git
 cd playing-card
 ```
-Installer les dépendances :
+2. Installer les dépendances
 ```bash
 npm install
 ```
 
-Lancer le serveur local :
+3. Lancer le serveur local
 ```bash
 ng serve
 ```
 
-Puis ouvrir http://localhost:4200
+4. Puis ouvrir
+👉 http://localhost:4200
+
+---
+
+## 🐳 Lancement avec Docker
+
+L’application peut être lancée sans installer Node ni Angular, uniquement avec Docker.Deux options sont possibles : via docker build ou via docker compose.
+
+---
+
+### 🧩 Option 1 — Docker simple
+
+1. Construire l’image
+```bash
+docker build -t playing-card:latest .
+```
+
+2. Construire l’image
+```bash
+docker run --rm -p 8080:80 playing-card:latest
+```
+
+3. Accéder à l’application :
+👉 http://localhost:8080
+
+---
+
+### ⚙️ Option 2 — Docker Compose
+
+Si vous préférez une commande unique, utilisez Docker Compose (fichier docker-compose.yml inclus).
+
+1. Lancer le projet
+```bash
+docker compose up --build
+```
+
+2. Ouvrir l’application
+👉 http://localhost:8080
+
+3. Arrêter le conteneur
+```bash
+docker compose down
+```

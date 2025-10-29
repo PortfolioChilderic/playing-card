@@ -1,0 +1,7 @@
+services:
+  playing-card:
+    build: .
+    image: playing-card:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
